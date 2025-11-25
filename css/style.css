@@ -1,0 +1,243 @@
+/*----------------- VARIABLES ---------------*/
+:root {
+    --beige: #EEE7E4;
+    --blue: #093447;
+    --orange: #dca63a;
+    --red: #b94834;
+
+    --text-dark: #222;
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    padding-top: 100px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h4 {
+    padding: 10px;
+    font-weight: normal;
+}
+
+/*----------------- HEADER ---------------*/
+
+header {
+    background: var(--beige);
+    padding: 1px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+header.scrolled {
+    background: var(--blue);
+    padding: 10px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.scrolled .header-content {
+    justify-content: center;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header.scrolled nav {
+    flex: 1;
+    justify-content: center;
+    gap: 50px;
+    height: 65px;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    /* transition: 0.3s; */
+}
+
+header.scrolled .logo {
+    display: none;
+}
+
+nav a {
+    /* margin-left: 20px; */
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header.scrolled nav a {
+    color: white;
+}
+
+/*----------------- TITLE ---------------*/
+
+.title {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.title p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/*----------------- SECTIONS ---------------*/
+
+.section-beige {
+    background: var(--beige);
+    padding: 80px 20px;
+}
+
+.section-orange {
+    background: var(--orange);
+    padding: 80px 20px;
+}
+
+.section-red {
+    background: var(--red);
+    padding: 80px 20px;
+}
+
+.section-beige h2,
+.section-orange h2,
+.section-red h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+
+/*----------------- METHODES ---------------*/
+
+.methods ul {
+    margin-top: 15px;
+    max-width: 800px;
+    margin: auto;
+    color: var(--text-dark);
+}
+
+.methods li {
+    margin-bottom: 10px;
+}
+
+/*----------------- TEAM ---------------*/
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+}
+
+/*----------------- TARIFS ---------------*/
+
+.tarif-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tarif-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    min-width: 250px;
+    text-align: center;
+}
+
+/*----------------- RESERVER ---------------*/
+
+.calendar-placeholder {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 10px #0002;
+}
+
+.btn-reserver {
+    display: block;
+    margin: 40px auto 0;
+    padding: 15px 40px;
+    background: white;
+    border: none;
+    color: var(--blue);
+    font-weight: bold;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reserver:hover {
+    background: #f3f3f3;
+}
+
+/*----------------- FOOTER ---------------*/
+
+footer {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    /* margin-top: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer {
+    height: 40px;
+}
