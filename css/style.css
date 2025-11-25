@@ -87,6 +87,23 @@ nav a {
     color: var(--blue);
     font-weight: 600;
     transition: 0.3s;
+
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 header.scrolled nav a {
