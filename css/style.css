@@ -91,6 +91,11 @@ nav a {
     position: relative;
 }
 
+nav a:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
 nav a::after {
     content: "";
     position: absolute;
