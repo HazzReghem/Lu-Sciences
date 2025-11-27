@@ -31,7 +31,122 @@ h4 {
 
 /*----------------- HEADER ---------------*/
 
+header.header-luxe,
 header {
+    background: var(--beige);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 8px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: background 0.35s ease, padding 0.35s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+header.scrolled,
+header.header-luxe.scrolled {
+    background: rgba(9, 52, 71, 0.80);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.header-inner,
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-luxe, nav {
+    display: flex;
+    gap: 28px;
+}
+
+header.scrolled .nav-luxe,
+header.scrolled nav {
+    flex: 1;
+    justify-content: center;
+    gap: 48px;
+    height: 56px;
+    align-items: center;
+}
+
+.logo,
+.logo-header {
+    height: auto;
+    max-height: 84px;
+    max-width: 220px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: max-height 0.28s ease, opacity 0.28s ease, transform 0.28s ease;
+}
+
+header.scrolled .logo,
+header.scrolled .logo-header {
+    display: none;
+}
+
+.nav-luxe a,
+header nav a {
+    color: var(--blue);
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.18s ease;
+}
+
+.nav-luxe a::after,
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffce59, #e8a526);
+    transition: width 0.28s ease;
+    border-radius: 2px;
+}
+
+.nav-luxe a:hover::after,
+header nav a:hover::after { width: 100%; }
+
+header.scrolled .nav-luxe a,
+header.scrolled nav a { color: #fff; }
+
+@media (max-width: 900px) {
+    .logo,
+    .logo-header {
+        max-height: 68px;
+    }
+    header.scrolled .logo,
+    header.scrolled .logo-header {
+        max-height: 48px;
+    }
+    .nav-luxe, nav { gap: 14px; }
+}
+
+@media (max-width: 480px) {
+    .logo,
+    .logo-header {
+        max-height: 56px;
+    }
+    header.scrolled .logo,
+    header.scrolled .logo-header {
+        max-height: 42px;
+    }
+}
+
+
+/* header {
     background: var(--beige);
     padding: 1px 0;
     width: 100%;
@@ -74,7 +189,6 @@ header.scrolled nav {
 
 .logo {
     height: 100px;
-    /* transition: 0.3s; */
 }
 
 header.scrolled .logo {
@@ -82,7 +196,6 @@ header.scrolled .logo {
 }
 
 nav a {
-    /* margin-left: 20px; */
     text-decoration: none;
     color: var(--blue);
     font-weight: 600;
@@ -113,7 +226,7 @@ nav a:hover::after {
 
 header.scrolled nav a {
     color: white;
-}
+} */
 
 /* ----------- HERO ----------- */
 
@@ -241,6 +354,29 @@ header.scrolled nav a {
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
+    padding: 30px 0;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.1));
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--blue);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.team h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
 }
 
 .team-card {
@@ -249,14 +385,15 @@ header.scrolled nav a {
     background: white;
     padding: 30px;
     border-radius: var(--radius);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 10px 10px 12px rgba(0,0,0,0.08);
 }
 
 .team-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: var(--blue);
-    margin-bottom: 10px;
     text-align: center;
+    margin-bottom: 6px;
+    font-weight: 700;
 }
 
 .team-bio {
@@ -313,22 +450,155 @@ header.scrolled nav a {
     object-fit: cover;
 }
 
-/*----------------- TARIFS ---------------*/
+/*----------------- TARIFS SECTION ---------------*/
 
-.tarif-container {
+/* .tarif-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .tarif-card {
-    background: white;
-    padding: 30px;
-    border-radius: var(--radius);
-    min-width: 250px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    padding: 35px 35px 45px;
+    border-radius: 16px;
+    min-width: 260px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border: 1px solid #ffffff55;
+}
+
+.tarif-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.tarif-header h3 {
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tarif-price {
+    margin: 10px 0 18px;
+}
+
+.tarif-price .price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.tarif-price .per {
+    font-size: 1.2rem;
+    color: #444;
+    margin-left: 4px;
+}
+
+.tarif-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.tarif-card.premium {
+    border: 2px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(220, 166, 58, 0.3);
+} */
+
+/* ---------------- STYLE PREMIUM ----------------- */
+
+.tarif-container {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.tarif-card {
+    position: relative;
+    padding: 45px 40px 55px;
+    min-width: 280px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.55),
+        rgba(255,255,255,0.15)
+    );
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+
+    transition: 0.35s ease;
+}
+
+.tarif-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #dca63a33, transparent);
+    pointer-events: none;
+}
+
+.tarif-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+.tarif-header h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--blue);
+    letter-spacing: 0.5px;
+}
+
+.tarif-price .price {
+    background: linear-gradient(135deg, #ffce59, #e8a526);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-size: 2.8rem;
+}
+
+.tarif-price .per {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.tarif-desc {
+    margin-top: 15px;
+    opacity: 0.85;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tarif-card.premium {
+    border: 2px solid #dca63aaa;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.65),
+        rgba(255,255,255,0.25)
+    );
+    box-shadow: 0 18px 60px rgba(220,166,58,0.35);
+}
+
+.tarif-card.premium::before {
+    background: linear-gradient(135deg, #dca63a55, transparent);
 }
 
 /*----------------- RESERVER ---------------*/
@@ -360,12 +630,12 @@ header.scrolled nav a {
     background: #f3f3f3;
 }
 
-/*----------------- FOOTER ---------------*/
+/*----------------- FOOTER  ---------------*/
 
 .footer {
-    background: #093447;
+    background: var(--blue);
     color: white;
-    padding: 50px 20px;
+    padding: 60px 20px 50px;
 }
 
 .footer-content {
@@ -377,9 +647,34 @@ header.scrolled nav a {
     gap: 40px;
 }
 
-.footer-left img {
-    width: 45px;
+.footer-col {
+    min-width: 240px;
+}
+
+.footer-logo-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 10px;
+}
+
+.footer-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo-footer {
+    width: 45px;
+}
+
+.footer-baseline {
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.footer-copy {
+    opacity: 0.6;
+    font-size: 0.9rem;
 }
 
 .footer h4 {
@@ -389,11 +684,13 @@ header.scrolled nav a {
 }
 
 .footer a {
-    color: #e3e3e3;
+    color: #e7e7e7;
     text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .footer a:hover {
+    color: var(--orange);
     text-decoration: underline;
 }
 
@@ -403,5 +700,9 @@ header.scrolled nav a {
         text-align: center;
         align-items: center;
     }
+    .footer-col {
+        text-align: center;
+    }
 }
+
 
