@@ -232,30 +232,85 @@ header.scrolled nav a {
     max-width: 650px;
 }
 
-/*----------------- TEAM ---------------*/
+/* ----------- TEAM SECTION ----------- */
 
 .team-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .team-card {
     flex: 1;
+    min-width: 320px;
     background: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.team-card h3 {
+    font-size: 1.8rem;
+    color: var(--blue);
+    margin-bottom: 10px;
     text-align: center;
 }
 
+.team-bio {
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #333;
+    min-height: 120px;
+}
+
+.team-section {
+    margin-bottom: 10px;
+}
+
+.team-section h4 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+/* ---- TAGS / CASES ---- */
+
+.tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: var(--beige);
+    color: var(--blue);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    transition: 0.2s ease;
+}
+
+.tag:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ---- PHOTO ---- */
+
 .photo {
-    width: 150px;
-    height: 150px;
-    background: #ddd;
+    width: 140px;
+    height: 140px;
+    background: #d6d6d6;
     border-radius: 50%;
     margin: 0 auto 25px;
+    object-fit: cover;
 }
 
 /*----------------- TARIFS ---------------*/
