@@ -345,6 +345,19 @@ header.scrolled nav a {
     max-width: 650px;
 }
 
+.method-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.6;
+}
+
+.method-list li::before {
+    content: "• ";
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
 /* ----------- TEAM SECTION ----------- */
 
 .team-container {
