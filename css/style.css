@@ -616,31 +616,85 @@ header.scrolled nav a {
 
 /*----------------- RESERVER ---------------*/
 
-.calendar-placeholder {
-    background: white;
-    padding: 40px;
-    border-radius: var(--radius);
-    max-width: 700px;
-    margin: auto;
+.reserver {
+    background: radial-gradient(circle at top, #d15d49 0%, #b94834 40%, #8a2f26 100%);
+    padding: 120px 20px;
+    color: white;
     text-align: center;
-    box-shadow: 0 0 10px #0002;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-reserver {
-    display: block;
-    margin: 40px auto 0;
-    padding: 15px 40px;
-    background: white;
-    border: none;
-    color: var(--blue);
-    font-weight: bold;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: 0.3s;
+.reserver::before {
+    content: "";
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 205, 115, 0.35), transparent 70%);
+    filter: blur(60px);
+    opacity: 0.45;
+    pointer-events: none;
 }
 
-.btn-reserver:hover {
-    background: #f3f3f3;
+.reserver-content {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.reserver h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.reserver-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 55px;
+}
+
+.calendar-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 55px 40px;
+    border-radius: 22px;
+    max-width: 1050px;
+    margin: auto;
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.20),
+        inset 0 0 0 1.5px rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: 0.35s ease;
+    transform: translateY(0);
+}
+
+.calendar-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, 0.28),
+        inset 0 0 0 1.5px rgba(255,255,255,0.45);
+}
+
+.calendly-inline-widget {
+    min-width: 320px;
+    height: 780px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.contact-note {
+    margin-top: 35px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+    line-height: 1.7;
 }
 
 /*----------------- FOOTER  ---------------*/

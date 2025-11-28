@@ -21,19 +21,6 @@
 
    <!----------------- HEADER ------------------>
 
-    <!-- <header id="header">
-        <div class="header-content">
-            <img src="img/logo.webp" alt="Logo Lu² Sciences" class="logo">
-            <nav role="navigation" aria-label="Navigation principale">
-                <a href="#methods">Méthodes</a>
-                <a href="#team">Qui sommes-nous</a>
-                <a href="#tarifs">Tarifs</a>
-                <a href="#reserver">Réserver</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header> -->
-
     <header id="header" class="header-luxe">
         <div class="header-inner">
             <img src="img/logo-header.webp" alt="Logo Lu² Sciences" class="logo-header">
@@ -239,13 +226,28 @@
     <!----------------- RESERVER ------------------>
 
     <section id="reserver" class="reserver section-red">
-        <h2>Réserver</h2>
-        <div class="calendar-placeholder">
-            <p>PLACEHOLDER CALENDRIER</p>
-        </div>
+        <div class="reserver-content">
+            <h2>Réserver un créneau</h2>
+            <p class="reserver-subtitle">Choisissez un créneau disponible directement dans notre calendrier :</p>
 
-        <button class="btn-reserver" aria-label="Ouvrir le calendrier de réservation">Réserver</button>
+            <div class="calendar-card">
+                <div 
+                    class="calendly-inline-widget" 
+                    data-url="https://calendly.com/rousselthibault1"
+                ></div>
+            </div>
+
+            <p class="contact-note">
+                Vous préférez réserver par téléphone ou poser une question ?
+                <br>Retrouvez nos coordonnées en bas de page.
+            </p>
+
+        </div>
     </section>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+
 
     <!----------------- FOOTER ------------------>
 
