@@ -7,3 +7,8 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled");
     }
 });
+
+document.querySelector(".burger").addEventListener("click", function() {
+    this.classList.toggle("active");
+    document.querySelector("nav").classList.toggle("open");
+});
