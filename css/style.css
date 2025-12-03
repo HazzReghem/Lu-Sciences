@@ -182,6 +182,10 @@ header.scrolled .burger span {
     padding: 120px 20px 140px 20px;
 }
 
+.hero404 {
+    height: 500px;
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
