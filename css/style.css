@@ -741,6 +741,10 @@ header.scrolled nav a {
     box-shadow: 0 10px 22px rgba(0,0,0,0.3);
 }
 
+.fa-solid {
+    margin-right: 10px;
+}
+
 .contact-note {
     margin-top: 30px;
     opacity: 0.85;
